@@ -1,28 +1,43 @@
-import { useState } from 'react'
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import Pricing from "./components/Pricing";
+import Footer from "./components/Footer";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
-        </div>
-      </div>
+    <div className="min-h-screen bg-white text-slate-900">
+      <Header />
+      <main>
+        <Hero />
+        {/* Demo anchor target */}
+        <section id="demo-section" className="bg-blue-50 py-12">
+          <div className="mx-auto max-w-5xl px-4 text-center">
+            <h2 className="text-2xl font-bold text-slate-900">Try the live demo</h2>
+            <p className="mx-auto mt-2 max-w-2xl text-slate-600">
+              Experience the teacher dashboard: create a class, add students, share your
+              unique URL, accept payments, and publish recordings — all in minutes.
+            </p>
+            <div className="mt-6 inline-flex flex-wrap items-center justify-center gap-3">
+              <a
+                href="#pricing"
+                className="rounded-lg bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow hover:bg-blue-700"
+              >
+                Start Free Demo
+              </a>
+              <a
+                href="#pricing"
+                className="rounded-lg border border-blue-200 bg-white px-5 py-3 text-sm font-semibold text-blue-700 hover:bg-blue-50"
+              >
+                Compare Plans
+              </a>
+            </div>
+          </div>
+        </section>
+        <Pricing />
+      </main>
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
