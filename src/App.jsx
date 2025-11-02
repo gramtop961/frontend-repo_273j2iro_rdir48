@@ -1,6 +1,10 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import Features from "./components/Features";
+import HowItWorks from "./components/HowItWorks";
 import Pricing from "./components/Pricing";
+import FAQ from "./components/FAQ";
+import CTA from "./components/CTA";
 import Footer from "./components/Footer";
 
 function App() {
@@ -9,10 +13,11 @@ function App() {
       <Header />
       <main>
         <Hero />
-        {/* Demo anchor target */}
-        <section id="demo-section" className="bg-blue-50 py-12">
+        <Features />
+        <HowItWorks />
+        <section id="demo-section" className="bg-blue-50 py-16">
           <div className="mx-auto max-w-5xl px-4 text-center">
-            <h2 className="text-2xl font-bold text-slate-900">Try the live demo</h2>
+            <h2 className="text-3xl font-bold text-slate-900">Try the live demo</h2>
             <p className="mx-auto mt-2 max-w-2xl text-slate-600">
               Experience the teacher dashboard: create a class, add students, share your
               unique URL, accept payments, and publish recordings — all in minutes.
@@ -34,6 +39,8 @@ function App() {
           </div>
         </section>
         <Pricing />
+        <FAQ />
+        <CTA />
       </main>
       <Footer />
     </div>
